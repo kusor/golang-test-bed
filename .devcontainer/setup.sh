@@ -39,8 +39,7 @@ cargo install cargo-expand
 cargo install cargo-edit
 cargo install cargo-add
 
-cp /root/.zshrc /home
 cp -r /root/.cargo /home
 cp -r /root/.rustup /home
 
-chown -R $USER_UID:$USER_GID /home /home/.cargo /home/.rustup
+chown -R $USER_UID:$USER_GID /home/.cargo /home/.rustup
