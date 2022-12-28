@@ -28,3 +28,5 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Check rust version:
+rustc --version
