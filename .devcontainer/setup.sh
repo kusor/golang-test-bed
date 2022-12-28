@@ -30,7 +30,7 @@ go install github.com/go-delve/delve/cmd/dlv@latest -y
 # install rust
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ## Install rustup and common components
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y
 # Check rust version:
 rustc --version
 # rustup install nightly
