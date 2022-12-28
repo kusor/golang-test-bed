@@ -1,16 +1,7 @@
 # install curl, git, ...
 apt-get update
 
-apt-get install -y \ 
-   curl \ 
-   git \ 
-   gnupg2 \ 
-   jq \ 
-   sudo \ 
-   zsh \ 
-   vim \ 
-   build-essential \ 
-   openssl
+apt-get install -y curl git gnupg2 jq sudo zsh vim build-essential openssl
 
 useradd -m user
 su user
@@ -39,7 +30,7 @@ go install github.com/go-delve/delve/cmd/dlv@latest -y
 # install rust
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ## Install rustup and common components 
-curl https://sh.rustup.rs -sSf | sh -s -- -y  
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y  
 # Check rust version:
 rustc --version
 
