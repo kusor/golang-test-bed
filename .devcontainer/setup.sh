@@ -1,10 +1,6 @@
 # install curl, git, ...
 apt-get update
-
 apt-get install -y curl git gnupg2 jq sudo zsh vim build-essential openssl
-
-useradd -m user
-su user
 
 # install go
 VERSION='1.19'
@@ -18,7 +14,7 @@ rm go$VERSION.$OS-$ARCH.tar.gz
 INSTALLED_GO_VERSION=$(go version)
 echo "Go version ${INSTALLED_GO_VERSION} is installed"
 
-# install gopls, dlv, hey
+# install gopls, dlv
 echo "Getting development tools"
 go install golang.org/x/tools/gopls@latest -y
 go install github.com/go-delve/delve/cmd/dlv@latest -y
@@ -42,3 +38,9 @@ rustup component add clippy
 cargo install cargo-expand 
 cargo install cargo-edit
 cargo install cargo-add
+
+cp /root/.zshrc /home/$USERNAME
+cp -R /root/.cargo /home/$USERNAME
+cp /root/.rustup /home/$USERNAME
+
+chown -R $USER_UID:$USER_GID /home/$USERNAME /home/$USERNAME/.zshrc /home/$USERNAME/.cargo /home/$USERNAME/.rustup
