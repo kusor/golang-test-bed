@@ -25,3 +25,6 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 # vscode-go dependencies 
 # echo "Getting dependencies for the vscode-go plugin "
 # via: https://github.com/microsoft/vscode-go/blob/master/.travis.yml
+
+# install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
