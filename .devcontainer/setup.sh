@@ -19,8 +19,8 @@ echo "Go version ${INSTALLED_GO_VERSION} is installed"
 
 # install gopls, dlv, hey
 echo "Getting development tools"
-go install golang.org/x/tools/gopls@latest
-go install github.com/go-delve/delve/cmd/dlv@latest
+go install golang.org/x/tools/gopls@latest -y
+go install github.com/go-delve/delve/cmd/dlv@latest -y
 
 # vscode-go dependencies 
 # echo "Getting dependencies for the vscode-go plugin "
